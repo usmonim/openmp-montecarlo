@@ -6,7 +6,6 @@
 
 double rand_range(double min, double max);
 
-
 long long int number_of_tosses;
 
 int num_threads;
@@ -46,27 +45,21 @@ int main (int argc, char* argv[])
             number_in_circle++;
         }
     }
-
-
-
+        
     }
 
-    printf("Num of Circle = %d \n", number_in_circle);
+    printf("Number of Circle = %d \n", number_in_circle);
 
     pi_estimate = 4 * number_in_circle / ((double) number_of_tosses);
     printf("pi = %f \n", pi_estimate);
 
     double estimate = number_in_circle / (double) number_of_tosses;
     printf("Estimate = %f \n", estimate);
-
     
-
     return 0;
 }
 
-
-
-// random double generator
+// random double generator function
 double rand_range(double min, double max){
     double range = (max - min); 
     double div = RAND_MAX / range;
